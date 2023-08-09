@@ -1,0 +1,37 @@
+
+  #container {
+    margin-top: 65px;
+    box-shadow: 0 0 20px black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.450);
+    margin-left: 400px;
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    grid-template-areas:
+    
+     "nav nav nav nav"
+     "uwan uwan foto foto"
+     "sosmed sosmed foto foto"
+     "contact contact contact contact"
+  }
+  .nav {
+    grid-area: nav;
+    padding: 10px;
+  }
+  .uwan {
+    grid-area: uwan;
+    padding: 10px;
+  }
+  .foto {
+    grid-area: foto;
+    width: 240px;
+  }
+  .sosmed {
+    grid-area: sosmed;
+    width: 240px;
+  }
+  .contact {
+    grid-area: contact;
+    padding: 10px;
+  }
