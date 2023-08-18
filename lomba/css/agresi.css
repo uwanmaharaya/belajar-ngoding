@@ -51,13 +51,13 @@ body {
 
   .home-container h2 {
     color: var(--text-color);
-text-align: center;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 2.2rem;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-letter-spacing: 3.6px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 3.6px;
   }
   
   .home-container p {
@@ -68,5 +68,26 @@ letter-spacing: 3.6px;
     height: 0;
     margin: 1rem 0 3rem;
     color: var(--text-color);
+  }
+  
+  .footer {
+    position: relative;
+    top: 370px;
+    right: -145px;
+    text-align: right;
+    width: 500px;
+    height: 50px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, rgba(28, 20, 84, 0) 0%, #ffffff 100%);
+  }
+
+  .footer a {
+    position: relative;
+    top: 5px;
+    font-size: 1.5rem;
+    color: rgb(130, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1000;
+
   }
   
