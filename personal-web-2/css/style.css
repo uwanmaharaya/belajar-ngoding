@@ -10,7 +10,7 @@
 }
 
 :root {
-  --bg-color: #001C20;
+  --bg-color: #001c20;
   --second-bg-color: #002c33;
   --text-color: #fff;
   --main-color: #0ef;
@@ -38,7 +38,7 @@ section {
   width: 100%;
   height: 70px;
   flex-shrink: 0;
-  background: linear-gradient(90deg, rgba(28, 20, 84, 0.00) 0%, #110655 100%);
+  background: linear-gradient(90deg, rgba(28, 20, 84, 0) 0%, #110655 100%);
   padding: 2rem 9%;
   display: flex;
   justify-content: space-between;
@@ -57,7 +57,7 @@ section {
   font-size: 1.7rem;
   color: var(--text-color);
   margin-left: 4rem;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .navbar a:hover,
@@ -118,7 +118,7 @@ span {
   border-radius: 50%;
   color: var(--main-color);
   margin: 3rem 1.5 3rem 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .social-media a:hover {
@@ -135,9 +135,9 @@ span {
   box-shadow: 0 0 1rem var(--main-color);
   font-size: 1.6rem;
   color: var(--second-bg-color);
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-weight: 600;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .button:hover {
@@ -195,8 +195,8 @@ span {
   padding: 3rem 1rem 4rem;
   border-radius: 2rem;
   text-align: center;
-  border: .2rem solid var(--bg-color);
-  transition: .5s ease;
+  border: 0.2rem solid var(--bg-color);
+  transition: 0.5s ease;
 }
 
 .services-container .services-box:hover {
@@ -214,7 +214,7 @@ span {
 }
 
 .services-box p {
-  font-size: 1.rem;
+  font-size: 1rem;
   margin: 1rem 0 3rem;
 }
 
@@ -243,7 +243,7 @@ span {
 
 .portfolio-box img {
   width: 100%;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .portfolio-box:hover img {
@@ -256,7 +256,7 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0, .1), var(--main-color));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,12 +264,11 @@ span {
   text-align: center;
   padding: 0 4rem;
   transform: translateY(100%);
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .portfolio-box:hover .portfolio-layer {
   transform: translateY(0%);
-
 }
 
 .portfolio-layer h4 {
@@ -278,7 +277,7 @@ span {
 
 .portfolio-layer p {
   font-size: 1.6rem;
-  margin: .3rem 0 1rem;
+  margin: 0.3rem 0 1rem;
 }
 
 .portfolio-layer a {
@@ -294,6 +293,42 @@ span {
 .portfolio-layer a i {
   font-size: 2rem;
   color: var(--second-bg-color);
+}
+
+.project h2 {
+  margin-bottom: 5rem;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.project-container .project-box {
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 1rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);
+  transition: 0.5s ease;
+}
+
+.project-container .project-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.project-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.project-box h3 {
+  font-size: 2.6rem;
 }
 
 .contact h2 {
@@ -320,8 +355,8 @@ span {
   font-size: 1.6rem;
   color: var(--text-color);
   background: var(--second-bg-color);
-  border-radius: .8rem;
-  margin: .7rem 0;
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
 }
 
 .contact form .input-box input {
@@ -337,48 +372,34 @@ span {
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-.project h2 {
-  margin-bottom: 5rem;
-}
-
-.project-container {
+.footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.project-container .project-box {
-  flex: 1 1 30rem;
+  padding: 2rem 9%;
   background: var(--second-bg-color);
-  padding: 3rem 1rem 4rem;
-  border-radius: 2rem;
-  text-align: center;
-  border: .2rem solid var(--bg-color);
-  transition: .5s ease;
 }
 
-.project-container .project-box:hover {
-  border-color: var(--main-color);
-  transform: scale(1.02);
+.footer-text p {
+  font-size: 1.6rem;
 }
 
-.project-box i {
-  font-size: 7rem;
-  color: var(--main-color);
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border-radius: 0.8rem;
+  transition: 0.5s ease;
 }
 
-.project-box h3 {
-  font-size: 2.6rem;
+.footer-iconTop a:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--second-bg-color);
 }
