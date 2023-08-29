@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Daftar Akun</title>
+    <style>
+      body {
+        background-image: url(perpustakaan.jpg);
+      }
+      div {
+        border: 1px solid rgba(255, 0, 0, 0);
+      }
+      #container-grid-login {
+        margin-top: 15px;
+        box-shadow: 0 0 20px black;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.450);
+        margin-left: 400px;
+        width: 100%;
+        max-width: 500px;
+        display: grid;
+        grid-template-areas:
+         "header-title header-title"
+         "login-logo login-form"
+      }
+      .header-title {
+        grid-area: header-title;
+        padding: 10px;
+      }
+      .login-logo {
+        grid-area: login-logo;
+        text-align: center;
+        padding: 10px;
+      }
+      .login-logo img {
+        width: 240px;
+      }
+      .login-form {
+        grid-area: login-form;
+        padding: 10px 10px 0px 10px;
+        text-align: left;
+      }
+      button{
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: rgb(0, 150, 255);
+}
+
+button:hover{
+    background: rgb(0, 0, 100);
+}
+input{
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: rgb(0, 255, 255);
+}
+textarea{
+  background: rgb(0, 255, 255);
+}
+    </style>
+  </head>
+  <body>
+    <div id="container-grid-login">
+       <div class="header-title">
+         <h1>Perpustakaan Online</h1>
+         <h3>Mohon untuk login</h3><hr>
+       </div>
+       <div class="login-logo"><img src="logo-um.png"></div>
+       <div class="login-form">
+         <form action="daftar-akun.html" method="post">
+          Nama Lengkap:<br>
+          <input type="text" name="Nama" placeholder="Nama Lengkap"/><br>
+          Tempat, Tanggal Lahir:<br>
+          <input type="text" name="TTL" placeholder="Tempat, Tanggal Lahir"/><br>
+          Email:<br>
+          <input type="text" name="text" placeholder="Email"/><br>
+          Password :<br>
+          <input type="password" name="Password" placeholder="Password"  minlength="8" maxlength="16"/><br>
+          Alamat : <br>
+         <textarea name="alamat" id="" cols="27" rows="3" placeholder="Alamat"></textarea>
+          <button type="submit">Daftar</button>
+          <a href="login.html">Login</a>
+       </div>
+    </div>
+  </body>
+</html>

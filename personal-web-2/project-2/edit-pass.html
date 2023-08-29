@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <title>Edit Pass</title>
+    <style>
+      body {
+        background-image: url(perpustakaan.jpg);
+      }
+      div {
+        border: 1px solid rgba(255, 0, 0, 0);
+      }
+      #container-grid-login {
+        margin-top: 65px;
+        box-shadow: 0 0 20px black;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.450);
+        margin-left: 400px;
+        width: 100%;
+        max-width: 500px;
+        display: grid;
+        grid-template-areas:
+         
+         "header-title header-title"
+         "button form"
+      }
+      .header-title {
+        grid-area: header-title;
+        padding: 10px;
+        .header-link{
+          text-align: right;
+        }
+      }
+      .logo img {
+        width: 100px;
+      }
+      button{
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: rgb(0, 0, 100);
+}
+input{
+    width: 90%;
+    margin: 8px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: rgb(0, 255, 255);
+}
+
+.button-login{
+  width: 200px;
+}
+
+.button {
+  background-color: rgb(0, 150, 255);
+  color: rgb(255, 255, 255);
+}
+.edit-pass {
+  width: 320px;
+  margin-left: 8px;
+  margin-bottom: 10px;
+  background: rgb(0, 150, 255);
+  color: rgb(255, 255, 255);
+}
+    </style>
+  </head>
+  <body>
+    <div id="container-grid-login">
+      <div class="header-title">
+        <div class="header-link">
+          <a href="profile.html">Profile</a>
+          |
+          <a href="login.html">Logout</a>
+      </div>
+      <div class="logo"><img src="logo-um.png"></div>
+         <h1>Selamat Datang di Perpustakaan Online</h1><hr>
+      </div>
+      <div class="login-form">
+        <form action="profile.html" method="post">
+          
+            <button class="button">Profile</button>
+       <br>
+        </form>
+        <div class="login-form2">
+        <form action="buku-baru.html" method="post">
+         <button type="submit">Edit Pass</button>
+        </div>
+      </div>
+      <div class="login-form">
+        <form action="edit-pass.html" method="post">
+          <input type="text" name="text" placeholder="Pass lama" minlength="8" maxlength="16"/><br>
+          <input type="text" name="text" placeholder="Pass baru" minlength="8" maxlength="16"/><br>
+          <input type="text" name="text" placeholder="Pass baru lagi" minlength="8" maxlength="16"/><br>
+            <button class="edit-pass">Edit Password</button>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -299,6 +299,11 @@ span {
   margin-bottom: 5rem;
 }
 
+.project-box p {
+  font-size: 1rem;
+  margin: 0.2rem 0 1rem;
+}
+
 .project-container {
   display: flex;
   justify-content: center;

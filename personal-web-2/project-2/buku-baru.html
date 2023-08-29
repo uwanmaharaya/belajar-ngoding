@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Buku Baru</title>
+    <style>
+      body {
+        background-image: url(perpustakaan.jpg);
+      }
+      div {
+        border: 1px solid rgba(255, 0, 0, 0);
+      }
+      #container-grid-login {
+        margin-top: 65px;
+        box-shadow: 0 0 20px black;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.450);
+        margin-left: 400px;
+        width: 100%;
+        max-width: 500px;
+        display: grid;
+        grid-template-areas:
+
+         "header-title header-title"
+         "login-logo login-form"
+      }
+      .header-title {
+        grid-area: header-title;
+        padding: 10px;
+        .header-link{
+          text-align: right;
+        }
+      }
+      .login-logo img {
+        width: 100px;
+      }
+      button{
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 100px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: rgb(0, 150, 255);
+}
+input{
+    width: 90%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: rgb(0, 255, 255);
+}
+
+.Buku-Baru {
+  background-color: rgb(0, 0, 100);
+  color: rgb(255, 255, 255);
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="container-grid-login">
+      <div class="header-title">
+      <div class="header-link">
+          <a href="profile.html">Profile</a>
+          |
+          <a href="login.html">Logout</a>
+      </div>
+      <div class="login-logo"><img src="logo-um.png"></div>
+         <h1>Perpustakaan Online</h1>
+         <h3>Mohon untuk login</h3><hr>
+      </div>
+      <div class="login-form">
+        <form action="daftar-buku.html" method="post">
+         <button type="submit">Daftar Buku</button><br>
+        </form>
+        <div class="login-form2">
+        <form action="buku-baru.html" method="post">
+         <button class="Buku-Baru">Buku Baru</button>
+        </div>
+      </div>
+      <div>
+       <form action="daftar-buku.html" method="post">
+        <input type="text" name="No" placeholder="No" minlength="8" maxlength="16"/><br>
+        <input type="text" name="ISBN" placeholder="ISBN" minlength="8" maxlength="16"/><br>
+        <input type="text" name="Judul Buku" placeholder="Judul Buku" minlength="8" maxlength="16"/><br>
+        <input type="text" name="Penerbit" placeholder="Penerbit" minlength="8" maxlength="16"/><br>
+        <input type="text" name="Tahun Terbit" placeholder="Tahun Terbit" minlength="8" maxlength="16"/><br>
+        <input type="text" name="Kategori" placeholder="Kategori" minlength="8" maxlength="16"/><br>
+        <div class="login-form3">
+          <button type="submit">Simpan</button>
+          <button type="submit">Batal</button>
+        </div>
+      </div>
+  </div>
+  </body>
+</html>

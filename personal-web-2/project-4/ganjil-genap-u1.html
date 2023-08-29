@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Ganjil Genap</title>
+  </head>
+  <body>
+    <button onclick="mengecek_bilangan()">Mengecek Bilangan</button>
+    <script>
+      function mengecek_bilangan(){
+        let input = prompt('Masukkan bilangan!');
+
+        if (isNaN(input)){
+            alert(input + ' bukan bilangan! coba lagi')
+            console.log(' bukan bilangan! coba lagi')
+        }
+        else{
+          if(input % 2 === 0){
+            alert(input + ' adalah bilangan genap!')
+            console.log(input +' adalah bilangan genap!')
+          }
+          else{
+            alert(input + ' adalah bilangan ganjil!')
+            console.log(input +' adalah bilangan ganjil!')
+          } 
+        }
+      }
+      mengecek_bilangan ()
+    </script>
+  </body>
+</html>

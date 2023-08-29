@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Profile</title>
+    <style>
+      body {
+        background-image: url(perpustakaan.jpg);
+      }
+      div {
+        border: 1px solid rgba(255, 0, 0, 0);
+      }
+      #container-grid-login {
+        margin-top: 65px;
+        box-shadow: 0 0 20px black;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.450);
+        margin-left: 400px;
+        width: 100%;
+        max-width: 500px;
+        display: grid;
+        grid-template-areas:
+         
+         "header-title header-title"
+         "button form"
+      }
+      .header-title {
+        grid-area: header-title;
+        padding: 10px;
+        .header-link{
+          text-align: right;
+        }
+      }
+      .logo img {
+        width: 100px;
+      }
+
+      .foto img {
+        width: 150px;
+        margin-left: 70px;
+      }
+
+      button{
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: rgb(0, 150, 255);
+    
+}
+.button-login{
+  width: 200px;
+}
+
+.button {
+  background-color: rgb(0, 0, 100);
+  color: rgb(255, 255, 255);
+}
+
+.identitas {
+  margin: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="container-grid-login">
+      <div class="header-title">
+        <div class="header-link">
+          <a href="profile.html">Profile</a>
+          |
+          <a href="login.html">Logout</a>
+      </div>
+      <div class="logo"><img src="logo-um.png"></div>
+         <h1>Selamat Datang di Perpustakaan Online</h1><hr>
+      </div>
+      <div class="login-form">
+         <form action="daftar-buku.html" method="post">
+            <button class="button">Profile</button><br>
+         </form>
+        <div class="login-form2">
+         <form action="edit-pass.html" method="post">
+         <button type="submit">Edit Pass</button>
+        </div>
+      </div>
+      <div class="login-form">
+        <form action="daftar-buku.html" method="post">
+        <div class="foto" onmouseover="alert('Uwan', '18')"><img src="fotouwan.png"></div>
+        <div class="Identitas">
+           Nama: Uwan Maharaya <br>
+           Tanggal Lahir: 26 Oktober 2004 <br>
+           Alamat: Mars <br>
+        </div>
+      </div>
+    </div>
+    <script>
+      function Alert(varNama, varUmur){
+      alert(varNama)
+      alert(varUmur)
+      }
+
+    
+   </script>
+
+  </body>
+</html>

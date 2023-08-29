@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>Daftar Buku</title>
+    <style>
+      body {
+        background-image: url(perpustakaan.jpg);
+      }
+      div {
+        border: 1px solid rgba(255, 0, 0, 0);
+      }
+      #container-grid-login {
+        margin-top: 65px;
+        box-shadow: 0 0 20px black;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.450);
+        margin-left: 400px;
+        width: 100%;
+        max-width: 500px;
+        display: grid;
+        grid-template-areas:
+
+         "header-title header-title"
+         "login-logo login-form"
+      }
+      .header-title {
+        grid-area: header-title;
+        padding: 10px;
+        .header-link{
+          text-align: right;
+        }
+      }
+      .login-logo img {
+        width: 100px;
+      }
+      button{
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 100px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: rgb(0, 150, 255);
+}
+table, th, td {
+      border:1px solid rgb(0, 0, 0) ;
+      text-align: center;
+    }
+
+    .Daftar-Buku {
+  background-color: rgb(0, 0, 100);
+  color: rgb(255, 255, 255);
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="container-grid-login">
+      <div class="header-title">
+      <div class="header-link">
+          <a href="profile.html">Profile</a>
+          |
+          <a href="login.html">Logout</a>
+      </div>
+      <div class="login-logo"><img src="logo-um.png"></div>
+         <h1>Perpustakaan Online</h1>
+         <h3>Mohon untuk login</h3><hr>
+      </div>
+      <div class="login-form">
+        <form action="daftar-buku.html" method="post">
+         <button class="Daftar-Buku">Daftar Buku</button><br>
+        </form>
+        <div class="login-form2">
+        <form action="buku-baru.html" method="post">
+         <button type="submit">Buku Baru</button>
+        </div>
+      </div>
+      <div class="login-table">
+          <table style="width: 95%;">
+            <tr>
+              <th>No</th>
+              <th>ISBN</th>
+              <th>Judul</th>
+              <th>Penerbit</th>
+              <th>Tahun Terbit</th>
+            </tr>      
+            <tr>
+              <th>1</th>
+              <th>123456789</th>
+              <th>Belajar HTML</th>
+              <th>Gramedia</th>
+              <th>2014</th>
+            </tr>
+            <tr>
+              <th>2</th>
+              <th>123456789</th>
+              <th>Belajar CSS</th>
+              <th>Gramedia</th>
+              <th>2014</th>
+            </tr>
+            <tr>
+              <th>3</th>
+              <th>123456789</th>
+              <th>Belajar JAVASCRIPT</th>
+              <th>Gramedia</th>
+              <th>2014</th>
+            </tr>
+            <tr>
+              <th>4</th>
+              <th>123456789</th>
+              <th>Belajar PHP</th>
+              <th>Gramedia</th>
+              <th>2014</th>
+            </tr>
+            <tr>
+              <th>5</th>
+              <th>123456789</th>
+              <th>Belajar PHYTON</th>
+              <th>Gramedia</th>
+              <th>2014</th>
+            </tr>
+          </table>
+      </div>  
+    </div>
+  </body>
+</html>

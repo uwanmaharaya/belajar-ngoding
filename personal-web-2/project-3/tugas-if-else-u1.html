@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Tugas if else</title>
+  </head>
+    <p id= 'hasilna'></p>
+  <body>
+    <script>
+      function rumus_volume_balok(panjang, lebar, tinggi){
+        const hasil = (panjang*lebar*tinggi);
+        const spasi = ' ';
+
+        if (hasil < 0){
+          alert(hasil + spasi + 'nilainya kurang dari nol')
+          console.log('hasil dari volume ini adalah negatif yaitu'+ spasi + hasil)
+        }
+        else if (hasil < 10 && hasil >= 0){
+          console.log('hasil dari volume ini adalah X dan jenisnya adalah satuan yaitu'+ spasi + hasil)
+          alert(hasil + spasi + 'nilainya kurang dari sepuluh')
+        }
+        else if (hasil >= 10 && hasil < 20){
+          console.log('hasil dari volume ini adalah X dan jenisnya adalah belasan yaitu'+ spasi + hasil)
+          alert(hasil + spasi + 'nilainya lebih dari sepuluh')
+        }
+        else if (hasil >= 20 && hasil < 100){
+          console.log('hasil dari volume ini adalah X dan jenisnya adalah puluhan yaitu'+ spasi + hasil)
+          alert(hasil + spasi + 'nilainya lebih dari dua puluh')
+        }
+        else if (hasil >= 100 && hasil < 1000){
+          console.log('hasil dari volume ini adalah X dan jenisnya adalah ratusan yaitu'+ spasi + hasil)
+          alert(hasil + spasi + 'nilainya lebih dari seratus')
+        }
+        else if (hasil >= 1000 && hasil < 10000){
+          console.log('hasil dari volume ini adalah X dan ini adalah benda kecil, jenisnya ribuan yaitu'+ spasi + hasil)
+          alert(hasil + spasi + 'nilainya lebih dari seribu' + spasi + 'dan ini adalah benda kecil')
+        }
+        else if (hasil >= 10000 && hasil < 100000){
+          console.log('hasil dari volume ini adalah X dan ini adalah benda sedang'+ spasi + hasil)
+          alert(hasil + spasi + 'nilainya lebih dari sepuluh ribu' + spasi + 'dan ini adalah benda sedang')
+        }
+        else if (hasil >= 100000 && hasil < 1000000){
+          console.log('hasil dari volume ini adalah X dan ini adalah benda besar'+ spasi + hasil)
+          alert(hasil + spasi + 'nilainya lebih dari seratus ribu' + spasi + 'dan ini adalah benda besar')
+        }
+        else {
+          alert('data invalid')
+        }
+
+        document.getElementById('hasilna').innerHTML = 'hasil dari volume ini adalah'+ spasi + hasil
+        return hasil
+      }
+      rumus_volume_balok(-4,2,1)
+      rumus_volume_balok(3,2,1)
+      rumus_volume_balok(5,3,1)
+      rumus_volume_balok(7,3,1)
+      rumus_volume_balok(10,5,3)
+      rumus_volume_balok(20,10,6)
+      rumus_volume_balok(80,40,10)
+      rumus_volume_balok(100,50,30)
+      rumus_volume_balok(99999,99999,99999)
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
