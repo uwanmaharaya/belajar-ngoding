@@ -101,7 +101,7 @@ body {
     z-index: 100
 }
 
-.footer p {
+.footer a {
     position: absolute;
     right: 75px;
     color: #fff;

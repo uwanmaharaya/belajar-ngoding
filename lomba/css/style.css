@@ -65,7 +65,7 @@ body {
 }
 
 .navbar a:hover {
-    color: red;
+    color: rgb(190, 190, 190);
     cursor: pointer;
     transition-duration: none;
 }
