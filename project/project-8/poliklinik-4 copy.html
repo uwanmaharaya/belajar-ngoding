@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poliklinik</title>
+  </head>
+  <body>
+    <h2 id="demo"></h2>
+    <h2 id="demo2"></h2>
+    <button onclick="time()">Klik</button>
+    <button onclick="rieut()">Klik2</button>
+  </body>
+  <script>
+    let total_in_room = 0;
+    const startHour = 8;
+    const endHour = 18;
+
+    function update_total_in_room() {
+      total_in_room = total_in_room + 1;
+    }
+
+    function time(hours) {
+      const inHours = prompt('Masukan jam sekarang:');
+
+      if (inHours < startHour) {
+        alert('Klinik Belum Buka');
+      } else if (inHours >= startHour && inHours <= endHour) {
+        alert('Klik Sudah Buka');
+      } else {
+        alert('Tutup');
+      }
+      document.getElementById('demo').innerHTML = '';
+    }
+    time();
+
+    function rieut(sicks) {
+      const sakit = prompt('Masukan no antrian:');
+      if (sakit >= 100) {
+        alert('Udah penuh, mohon besok kesini lagi');
+      } else if (sakit >= 1 && sakit <= 5) {
+        alert('Silahkan masuk');
+      } else {
+        alert('Maaf maksimal 5 orang, mohon tunggu dulu');
+      }
+      document.getElementById('demo2').innerHTML = '';
+    }
+    rieut();
+
+    function update_queue() {
+      if (q != 0) {
+        update_total_in_room();
+      } else {
+      }
+    }
+
+    function exit_room() {
+      total_in_room = total_in_room - 1;
+    }
+  </script>
+</html>

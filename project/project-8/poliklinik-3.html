@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Poliklinik</title>
+  </head>
+  <body>
+    <button onclick="total()">Klik</button>
+  </body>
+  <script>
+    let maxPasien = 100;
+
+    function total() {
+      let cekInRoom = 5;
+
+      if (maxPasien > 0) {
+        maxPasien--;
+        console.log('sisa antrian =' + maxPasien);
+      } else {
+        console.log('full');
+      }
+    }
+  </script>
+</html>

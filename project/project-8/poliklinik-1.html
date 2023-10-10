@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poliklinik</title>
+  </head>
+  <body>
+    <h2 id="demo"></h2>
+    <h2 id="demo2"></h2>
+    <button onclick="time()">Klik</button>
+    <button onclick="rieut()">Klik2</button>
+  </body>
+  <script>
+    function time(hours) {
+      const inHours = prompt('Masukan jam sekarang:');
+      const startHour = 8;
+      const endHour = 18;
+
+      if (inHours < startHour) {
+        alert('Klinik Belum Buka');
+      } else if (inHours >= startHour && inHours <= endHour) {
+        alert('Klik Sudah Buka');
+      } else {
+        alert('Tutup');
+      }
+      document.getElementById('demo').innerHTML = '';
+    }
+    time();
+
+    function rieut(sicks) {
+      const sakit = prompt('Masukan no antrian:');
+      if (sakit >= 100) {
+        alert('Udah penuh, mohon besok kesini lagi');
+      } else if (sakit >= 1 && sakit <= 5) {
+        alert('Silahkan masuk');
+      } else {
+        alert('Maaf maksimal 5 orang, mohon tunggu dulu');
+      }
+      document.getElementById('demo2').innerHTML = '';
+    }
+    rieut();
+  </script>
+</html>

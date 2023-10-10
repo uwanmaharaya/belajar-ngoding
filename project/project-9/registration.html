@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+</head>
+<body>
+  <div class="main">
+    <form action="#">
+      <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="uwan">
+      </div>
+    </form>
+  </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="type" name="password" id="uwan123">
+      </div>
+      <br>
+      <div>
+        <label for="password">Password</label>
+        <input type="type" name="password" id="uwan123">
+      </div>
+      <div>
+        <button onclick="checkForm()">Create</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function checkForm() {      
+      let username = document.getElementById('uwan').value;
+      let password = document.getElementById('uwan123').value;
+
+      if (username && password) {
+        alert('Daftar berhasil');
+        window.location.replace('index.html');
+      } else if (username == '' && password == '') {
+        alert('Isi data diri anda!');
+      } else if (password == '') {
+        alert('Password tidak boleh kosong!');
+      } else if (username == '') {
+        alert('Username tidak boleh kosong!');
+      } else {
+        alert('Maaf, anda belum terdaftar. Silahkan daftar terlebih dahulu');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poliklinik</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Selamat Datang di Klinik</h1>
+    <button onclick="hour_in(9)">Masuk</button>
+    <button onclick="exit_room()">Keluar</button>
+  </body>
+  <script>
+    let total_patient_in_day = 0;
+    let total_in_room = 0;
+    let antrian = 0;
+    const hour_start = 8;
+    const hour_end = 18;
+
+    //update total pasien di hari ini
+    function update_total_in_day() {
+      total_patient_in_day = total_patient_in_day + 1;
+    }
+
+    //update total pasien dalam ruangan
+    function update_total_in_room() {
+      total_in_room = total_in_room + 1;
+    }
+
+    //cek antrian
+    function cek_antrian() {
+      if (antrian <= 0) {
+        console.log('Antrian kosong');
+      } else {
+        console.log('Ada antrian  ' + antrian);
+      }
+    }
+
+    //update total pasien dalam antrian, jika dalam ruangan udah penuh
+    //dan jika dalam ruangan sudah kurang dari 5 kurangi antrian dan masuk ke ruangan
+    function update_queue(queue) {
+      if (queue == 'out') {
+        if (antrian >= 1) {
+          update_total_in_room();
+          antrian = antrian - 1;
+        }
+      } else if (queue == 'in') {
+        antrian = antrian + 1;
+      }
+    }
+
+    //kurangi total pasien dalam ruangan
+    //gunakan fungsi queue juga untuk mengurangi antrian jika dalam ruangan udah kurang dari 5
+    function exit_room() {
+      if (total_in_room >= 1) {
+        total_in_room = total_in_room - 1;
+
+        if (antrian >= 1) {
+          antrian = antrian - 1;
+          total_in_room = total_in_room + 1;
+        }
+        //update queue jka ada yang keluar
+        update_queue('out ');
+        console.log('Terimakasih');
+      }
+    }
+
+    function hour_in(hour) {
+      //cek kliniknya buka atau tutup
+      if (hour >= hour_start && hour <= hour_end) {
+        alert('Silahkan masuk ke klinik');
+
+        if (total_patient_in_day < 100) {
+          alert('Silahkan masuk ke ruangan pemeriksaan');
+          update_total_in_day();
+
+          //cek masih dalam ruangan atau udah penuh
+          if (total_in_room < 5) {
+            alert('Silahkan masuk');
+            update_total_in_room();
+          } else {
+            alert('Ruangan penuh, harap antri');
+            console.log('Ruangan penuh, harap antri');
+            //update queue karena antrian penuh
+            update_queue('in');
+            return;
+          }
+        } else {
+          alert('Klinik sudah mencapai maksimum jumlah pasien hari ini');
+          return;
+        }
+      } else {
+        alert('Klinik tutup');
+        return;
+      }
+    }
+    hour_in();
+  </script>
+</html>
